@@ -1,0 +1,9 @@
+La función array_divide devuelve dos arrays, uno conteniendo las llaves, y el otro conteniendo los valores del array original
+
+-------------------------------------------------------------------------
+        $array = ['foo' => 'bar'];
+
+        list($keys, $values) = array_divide($array);
+
+         dd($keys); 
+-------------------------------------------------------------------------

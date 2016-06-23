@@ -1,0 +1,5 @@
+-  Crear un controlador con git con la siguiente linea:
+
+------------------------------------------------------------------
+php artisan make:controller PhotoController
+------------------------------------------------------------------

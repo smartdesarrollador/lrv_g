@@ -1,0 +1,16 @@
+array_first
+
+El método array_first devuelve el primer elemento de un array el cual pase una función de comparación.
+
+---------------------------------------------------------------------
+$array = [100, 200, 300];
+
+$value = array_first($array, function($key, $value)
+{
+    return $value >= 150;
+});
+
+dd($value); 
+
+// 200
+---------------------------------------------------------------------

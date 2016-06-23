@@ -1,0 +1,5 @@
+
+colorar las rutas en el siguiente archivo "routes.php"
+
+ubicacion:  app/Http/routes.php
+

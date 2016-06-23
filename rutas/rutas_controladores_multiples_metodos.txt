@@ -1,0 +1,48 @@
+
+* Ejemplo ruta para controlador y multiples metodos:
+
+---------------------------------------------------------
+Route::resource('photo', 'PhotoController');
+---------------------------------------------------------
+
+ejemplos de direccion:
+
+/photo/creacion
+/photo/modificacion
+
+Nota: previamente se tiene que crear el controlador, ejemplo:
+
+--------------------------------------------------------------------
+
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Controllers\Controller;
+
+class PhotoController extends Controller
+{
+    /**
+     * Show the profile for the given user.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function index()
+    {
+        return \View::make('home');   
+    }
+
+     public function creacion()
+    {
+           
+    }
+
+     public function modificacion()
+    {
+       
+    }
+}
+
+-------------------------------------------------------------------------
+

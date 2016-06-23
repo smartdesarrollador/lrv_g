@@ -1,0 +1,39 @@
+- Crear una vista para el siguiente codigo:
+
+----------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.getScript("http://localhost/sitio/storage/app/demo_ajax_script.js");
+    });
+});
+</script>
+</head>
+<body>
+
+<button>Use Ajax to get and then run a JavaScript</button>
+
+</body>
+</html>
+
+----------------------------------------------------------------
+
+- Crear la ruta en routes.php
+- LLamar a la vista desde el controlador
+- Crear el archivo "demo_ajax_script.js" con el siguiente contenido y guardarlo
+en la ruta app/storage/app/ 
+
+-----------------------------------------------------------------
+alert("This JavaScript alert was loaded by AJAX");
+-----------------------------------------------------------------
+
+
+- dentro de la funcion $.getScript() colocar el enlace: http://localhost/sitio/storage/app/demo_ajax_script.js
+
+
+REFERENCIA:
+http://www.w3schools.com/jquery/ajax_getscript.asp

@@ -1,0 +1,25 @@
+-  Generar la tabla para migracion con la siguiente linea:
+
+----------------------------------------------------------
+php artisan make:migration create_users_table
+---------------------------------------------------------
+
+- La tabla se generara en la ruta:
+
+/database/migrations/.......
+
+- Luego para crear la tabla una vez se migre incluir en la funcion up() el siguiente codigo:
+
+----------------------------------------------------------------
+Schema::create('users', function($table)
+{
+    $table->increments('id');
+});
+----------------------------------------------------------------
+
+Nota: cambiar el nombre users por el nombre de la tabla que se va a crear.
+
+
+- luego insertar las columnas adicionales segun el proyecto , que esta especificado 
+   en el archivo "Agregar_columnas_a_tablas.txt" 
+

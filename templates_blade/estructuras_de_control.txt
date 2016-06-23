@@ -1,0 +1,34 @@
+Ejemplo con IF
+--------------------------------------------
+@if( count($users) === 1 )
+    Solo hay un usuario!
+@elseif (count($users) > 1)
+    Hay muchos usuarios!
+@else
+    No hay ningún usuario :(
+@endif
+-------------------------------------------
+
+Ejemplo con FOR
+
+--------------------------------------------
+@for ($i = 0; $i < 10; $i++)
+    El valor actual es {{ $i }}
+@endfor
+-------------------------------------------
+
+Ejemplo con WHILE
+
+-----------------------------------------------
+@while (true)
+    <p>Soy un bucle while infinito!</p>
+@endwhile
+-------------------------------------------------
+
+Ejemplo con FOREACH
+
+-------------------------------------------------
+@foreach ($users as $user)
+    <p>Usuario {{ $user->name }} con identificador: {{ $user->id }}</p>
+@endforeach
+------------------------------------------------

@@ -1,0 +1,15 @@
+-listar dos tablas relacionadas
+
+--------------------------------------------------------------
+            $users= DB::table('tablacurso')
+            ->join('tablaclase', 'tablacurso.uno_id', '=', 'tablaclase.id')
+            ->select( 'tablacurso.nombre','tablacurso.body', 'tablaclase.nombreclase')
+            ->get();
+
+            dd($users);
+            
+            return $users;
+--------------------------------------------------------------
+            
+
+        

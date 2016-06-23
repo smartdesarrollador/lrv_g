@@ -1,0 +1,29 @@
+- Crear una vista para el siguiente codigo:
+
+----------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.get("http://localhost/sitio/storage/app/archivo.txt", function(data, status){
+            alert("Data: " + data + "\nStatus: " + status);
+        });
+    });
+});
+</script>
+</head>
+<body>
+
+<button>Send an HTTP GET request to a page and get the result back</button>
+
+</body>
+</html>
+----------------------------------------------------------------
+
+- Crear la ruta en routes.php
+- LLamar a la vista desde el controlador
+- Guardar en la ruta app/storage/app/ el archivo "archivo.txt"
+- dentro de la funcion $.get() colocar el enlace: http://localhost/sitio/storage/app/archivo.txt

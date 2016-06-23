@@ -1,0 +1,67 @@
+1- colocar el siguiente codigo en el archivo "composer.json" en la
+parte de "require-dev":
+
+------------------------------------------------------------
+ 	"guzzlehttp/guzzle": "~4.0"
+------------------------------------------------------------
+
+2 - ejecutar la siguiente linea en git:
+
+-------------------------------------------------------------
+ 	$ composer update
+-------------------------------------------------------------
+
+3 - crear una cuenta de mailgun en el siguiente link:
+     https://mailgun.com/signup
+
+4- utilizar los datos de la cuenta de mailgun para la configuracion
+de correos en laravel:
+
+    - ejemplo de configuracion de ".env" :
+
+-------------------------------------------------------------
+MAIL_DRIVER=mailgun
+MAIL_HOST=smtp.mailgun.org
+MAIL_PORT=2525
+MAIL_USERNAME=postmaster@sandbox7d2266af14044692927403a219e3281d.mailgun.org
+MAIL_PASSWORD=ab607e659d8020615832b925389bbfda
+MAIL_ENCRYPTION=null
+
+MAILGUN_DOMAIN=sandbox7d2266af14044692927403a219e3281d.mailgun.org
+MAILGUN_PASS=key-f5aaadb2bf7a4ed8922bc66eec35135d
+
+CONTACT_MAIL = enrique_sistema_5000@hotmail.com
+CONTACT_NAME = jeans
+-------------------------------------------------------------
+
+Nota: los datos de configuracion en ".env" son diferentes en cada cuenta de mailgun,
+       por lo que se debe colocar los datos de la cuenta creada.
+
+5- configurar "services.php" que esta ubicado en app/config
+
+-----------------------------------------------------------------
+'mailgun' => [
+'domain' => env('MAILGUN_DOMAIN'),
+'secret' => env('MAILGUN_PASS'),
+],
+----------------------------------------------------------------- 
+
+6 - crear las rutas de acceso en routes.php
+
+------------------------------------------------------------------
+Route::post('send', ['as' => 'send', 'uses' => 'MailController@send'] );
+Route::get('contact', ['as' => 'contact', 'uses' => 'MailController@index'] );
+------------------------------------------------------------------
+
+7- crear el controlador "MailController" y colocar el codigo del archivo
+   MailController.php adjunto.
+
+8- copiar la carpeta "emails" con todo y su contenido en la ubicacion resources/views/
+
+9- Entrar a la direccion del proyecto mas /contact para visualizar el formulario de contacto
+   y enviar los datos de contacto al correo configurado.
+
+
+ LINKS DE REFERENCIAS:
+https://styde.net/envio-de-correos-con-mailgun-en-laravel-5/
+https://www.youtube.com/watch?v=sy7HRL4mD78

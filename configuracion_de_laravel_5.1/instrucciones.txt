@@ -1,0 +1,46 @@
+1- configurar el archivo ".env"
+
+  Descripcion de elementos del archivo .env
+
+
+-----------------------------------------------------------------------------------------------
+APP_DEBUG=true   
+
+*colocar "true" o "false" para poder visualizar los errores de forma detallada (video tutorial:
+https://youtu.be/YunVjXjKFzg?list=PLIddmSRJEJ0u-5Nv2k6W8Vhe0wUP_7H5W&t=373)
+-----------------------------------------------------------------------------------------------
+
+
+***********************************************************************************************
+
+2- configurar el archivo "app.php" de la carpeta "config"
+
+   Descripcion de elementos del archivo app.php
+
+   ---------------------------------------------------------------------------------------------
+   'timezone' => 'UTC',
+
+   cambiar UTC por la zona horaria de tu ubicacion ejemplo: 'timezone' => 'America/Lima', (video 
+   tutorial: https://youtu.be/YunVjXjKFzg?list=PLIddmSRJEJ0u-5Nv2k6W8Vhe0wUP_7H5W&t=448)
+
+   ---------------------------------------------------------------------------------------------
+   'locale' => 'en',
+    
+    - cambiar el lenguaje a español, ejemplo:  'locale' => 'es', 
+    - Luego incluir la carpeta "es" que esta en el carpeta "incluir_lenguaje_español" en la 
+    siguiente ruta del proyecto: resources/lang/
+    - link de otros lenguajes: https://github.com/caouecs/Laravel-lang
+   ---------------------------------------------------------------------------------------------
+
+ **********************************************************************************************
+
+ 3 - configurar el archivo "database.php" de la carpeta config
+
+ ------------------------------------------------------------------------------------------------
+'default' => env('DB_CONNECTION', 'mysql'),
+
+Para cambiar de base de datos a sqlserver se realiza el siguiente cambio:
+
+'default' => env('DB_CONNECTION', 'sqlsrv'),
+
+ ------------------------------------------------------------------------------------------------

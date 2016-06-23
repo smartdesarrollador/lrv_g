@@ -1,0 +1,40 @@
+- listar dos columnas donde "nombre" sea igual a "juan" :
+
+------------------------------------------------------------------------
+        $users = DB::table('consultas')
+        ->select(['nombre','descripcion' ])
+        ->where('nombre','juan')
+        ->get();
+
+        dd($users);
+
+        return $users;
+------------------------------------------------------------------------
+
+- listar dos columnas excepto la fila donde se encuentra el nombre juan:
+
+-------------------------------------------------------------------------
+        $users = DB::table('consultas')
+        ->select(['nombre','descripcion' ])
+        ->where('nombre','<>','juan') // <> es para que no aparesca esa fila
+        ->get();
+
+        dd($users);
+
+        return $users;
+-------------------------------------------------------------------------
+
+- listar dos columnas donde la edad sea menor a 20 :
+
+--------------------------------------------------------------------------
+       $users = DB::table('consultas')
+        ->select(['nombre','descripcion' ])
+        ->where('edad','<','20')
+        ->orderBy('nombre','ASC')
+        ->get();
+
+        dd($users);
+
+        return $users;
+--------------------------------------------------------------------------
+

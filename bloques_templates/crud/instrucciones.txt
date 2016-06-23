@@ -1,0 +1,11 @@
+1- Especificaciones de los archivos
+
+   - routes.php ......... copiar la ruta que esta dentro
+   - AdminModel.php...... crear el modelo AdminModel y copiar el codigo 
+   - AdminController.php .......crear el controlador AdminController y copiar el codigo
+   - AdminForm.php.............crear el requests AdminForm y copiar el codigo
+   - 2016_02_26_215420_tableadmin.php..........crear la tabla tableadmin y copiar el codigo
+   - carpeta "adminvista" ............... copiar la carpeta de las vistas en la siguiente ruta:
+                                           resources/views/ 
+
+

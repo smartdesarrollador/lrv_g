@@ -1,0 +1,47 @@
+* Ejemplos de rutas para controlador y un metodo:
+
+----------------------------------------------------------------
+Route::get('user', 'UserController@showProfile');
+----------------------------------------------------------------
+
+Ejemplo direccion:
+
+/user/
+
+* Ejemplos de rutas para controlador y un metodo con parametro:
+----------------------------------------------------------------
+Route::get('user/{id}', 'UserController@showProfile');
+----------------------------------------------------------------
+
+Ejemplo direccion:
+
+/user/id
+
+
+
+Nota: Previamente se tiene que crear el controlador, ejemplo:
+
+------------------------------------------------------------------
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Controllers\Controller;
+
+class UserController extends Controller
+{
+    /**
+     * Show the profile for the given user.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function showProfile($id)
+    {
+        return view('user.profile', ['user' => User::findOrFail($id)]);
+    }
+}
+------------------------------------------------------------------
+
+
+

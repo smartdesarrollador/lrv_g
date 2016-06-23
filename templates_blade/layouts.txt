@@ -1,0 +1,36 @@
+Ejemplo layout:
+
+
+Plantilla principal (resources/views/layouts/master.blade.php) :
+-------------------------------------------------------------
+<html>
+    <head>
+        <title>Mi Web</title>
+    </head>
+    <body>
+        @section('menu')
+            Contenido del menu
+        @show
+
+        <div class="container">
+            @yield('content')
+        </div>
+    </body>
+</html>
+-------------------------------------------------------------
+
+Plantilla con el contenido que se mostrara en la plantilla principal:
+
+..........................................................................
+@extends('layouts.master')
+
+@section('menu')
+    @parent
+    <p>Este condenido es añadido al menú principal.</p>
+@endsection
+
+@section('content')
+    <p>Este apartado aparecerá en la sección "content".</p>
+@endsection
+..........................................................................
+

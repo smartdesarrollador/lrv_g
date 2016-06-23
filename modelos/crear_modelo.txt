@@ -1,0 +1,25 @@
+- Crear modelo con git con la siguiente linea:
+
+-------------------------------------------------------
+php artisan make:model nombre_modelo
+-------------------------------------------------------
+
+- se creara un modelo que estara ubicado en la ruta:
+
+/app/nombre_modelo.php
+
+Ejemplo de modelo generado:
+
+--------------------------------------------------------------
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class usuario extends Model
+{
+    //
+}
+---------------------------------------------------------------
+

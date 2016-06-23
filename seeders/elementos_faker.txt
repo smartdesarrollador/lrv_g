@@ -1,0 +1,49 @@
+
+* Nombre
+------------------------------------------------------------------------
+$faker->name                                      // 'Dr. Zane Stroman' // nombre completo
+$faker->firstName                                 // 'Maynard' // primer nombre
+$faker->firstNameMale                             // 'Maynard' // primer nombre de genero masculino
+$faker->firstNameFemale                           // 'Rachel' // primer nombre de genero femenino
+$faker->lastName                                  // 'Zulauf' // apellido
+
+$faker->title($gender = null|'male'|'female')     // 'Ms.'
+$faker->titleMale                                 // 'Mr.'
+$faker->titleFemale                               // 'Ms.'
+$faker->suffix                                    // 'Jr.'
+---------------------------------------------------------------------------
+
+* Direccion
+
+-----------------------------------------------------------------------------
+$faker->address              // '8888 Cummings Vista Apt. 101, Susanbury, NY 95473' // direccion completa 
+$faker->city                                // 'West Judge'
+
+$faker->cityPrefix                          // 'Lake'
+$faker->secondaryAddress                    // 'Suite 961'
+$faker->state                               // 'NewMexico'
+$faker->stateAbbr                           // 'OH'
+$faker->citySuffix                          // 'borough'
+$faker->streetSuffix                        // 'Keys'
+$faker->buildingNumber                      // '484'
+$faker->streetName                          // 'Keegan Trail'
+$faker->streetAddress                       // '439 Karley Loaf Suite 897'
+$faker->postcode                            // '17916'
+$faker->country                             // 'Falkland Islands (Malvinas)'
+$faker->latitude($min = -90, $max = 90)     // 77.147489
+$faker->longitude($min = -180, $max = 180)  // 86.211205
+-----------------------------------------------------------------------------
+
+* Texto
+--------------------------------------------------------------------------------
+$faker->realText($maxNbChars = 2000, $indexSize = 2)  // texto con una cantidad maxima de 2000 caracteres
+$faker->text; // parrafo corto
+---------------------------------------------------------------------------------
+
+* Numero
+---------------------------------------------------------------------
+$faker->numberBetween($min = 1000, $max = 8000);  // numero entre 1000 y 8000
+---------------------------------------------------------------------
+
+REFERENCIA:
+https://github.com/fzaninotto/Faker

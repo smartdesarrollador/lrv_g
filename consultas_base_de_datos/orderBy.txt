@@ -1,0 +1,13 @@
+-listar dos columnas en orden ascendente por nombre :
+
+-------------------------------------------------------------
+        $users = DB::table('consultas')
+        ->select(['nombre','descripcion' ])
+        ->where('nombre','<>','juan')
+        ->orderBy('nombre','ASC')
+        ->get();
+
+        dd($users);
+
+        return $users;
+-------------------------------------------------------------

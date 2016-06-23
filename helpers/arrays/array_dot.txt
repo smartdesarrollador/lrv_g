@@ -1,0 +1,13 @@
+array_dot
+
+La función array_dot convierte un array multi-dimensional en un array de un sólo nivel utilizando la notación de "puntos" para indicar los niveles de profundidad.
+
+------------------------------------------------------------------------------
+         $array = ['foo' => ['bar' => 'baz']];
+
+         $array = array_dot($array);
+
+         dd($array); 
+
+         // ['foo.bar' => 'baz'];
+------------------------------------------------------------------------------

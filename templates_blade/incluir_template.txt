@@ -1,0 +1,11 @@
+Ejemplo para incluir plantilla dentro de otra plantilla
+
+----------------------------------------------------------------
+@include('view_name')
+----------------------------------------------------------------
+
+Ejemplo para incluir plantilla dentro de otra plantilla con array:
+
+...................................................................
+@include('view_name', array('some'=>'data'))
+...................................................................

@@ -1,0 +1,18 @@
+ - listar todas las columnas de una tabla:
+
+-------------------------------------------------------------
+        $users = DB::table('consultas')->get();
+
+         dd($users);
+
+        return $users;
+--------------------------------------------------------------
+
+- listar todas las columnas y mostrarlas en una vista:
+
+------------------------------------------------------------
+$users = DB::table('consultas')->get();
+
+
+return view('consulta.index', ['users' => $users]);
+------------------------------------------------------------

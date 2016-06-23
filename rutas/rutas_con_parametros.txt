@@ -1,0 +1,15 @@
+Ejemplo ruta con parametro
+
+Route::get('nombre/{id}', function ($id) {
+    return 'Mi nombre es: '.$id;
+});
+
+Ejemplos paramatros por defecto:
+
+Route::get('user/{name?}', function ($name = null) {
+    return $name;
+});
+
+Route::get('user/{name?}', function ($name = 'John') {
+    return $name;
+});

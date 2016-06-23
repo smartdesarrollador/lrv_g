@@ -1,0 +1,14 @@
+array_fetch
+
+El método array_fetch retorna un array de un sólo nivel que contiene el elemento anidado seleccionado.
+
+----------------------------------------------------------------------------------
+$array = [
+    ['developer' => ['name' => 'Taylor']],
+    ['developer' => ['name' => 'Dayle']]
+              ];
+
+ $array = array_fetch($array, 'developer.name');
+
+ dd($array); 
+----------------------------------------------------------------------------------

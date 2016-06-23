@@ -1,0 +1,26 @@
+- instalar el programa composer que se encuentra en la carpeta "instalador composer".
+  
+  pasos:
+
+  1- hacer doble click en el instalador composer
+  2- Luego en el boton "ejecutar"
+  3- Luego "next"
+  4- luego "next"
+  5- Colocar la ruta del ejecutable de php, como por ejemplo:  C:\xampp\php\php.exe
+    luego de poner la ruta hacer click en "next".
+  6- Luego en "install".
+  7- Luego "finish".
+
+
+
+
+
+
+
+
+  
+
+ LINK PARA DESCARGAR INSTALADOR DE COMPOSER:
+
+ https://getcomposer.org/
+

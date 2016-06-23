@@ -1,0 +1,49 @@
+- Crear una vista para el siguiente codigo:
+
+----------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.getJSON("http://localhost/sitio/storage/app/demo_ajax_json.js", function(result){
+            $.each(result, function(i, field){
+                $("div").append(field + " ");
+            });
+        });
+    });
+});
+</script>
+</head>
+<body>
+
+<button>Get JSON data</button>
+
+<div></div>
+
+</body>
+</html>
+
+----------------------------------------------------------------
+
+- Crear la ruta en routes.php
+- LLamar a la vista desde el controlador
+- Crear el archivo "demo_ajax_json.js" con el siguiente contenido y guardarlo
+en la ruta app/storage/app/ 
+
+-----------------------------------------------------------------
+{ 
+  "firstName": "John",
+  "lastName": "Doe",
+  "age": 25
+}
+-----------------------------------------------------------------
+
+
+- dentro de la funcion $.getJSON() colocar el enlace: http://localhost/sitio/storage/app/demo_ajax_json.js
+
+
+REFERENCIA:
+http://www.w3schools.com/jquery/ajax_getjson.asp

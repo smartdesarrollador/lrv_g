@@ -1,0 +1,9 @@
+1- Primero realizar las indicaciones de la carpeta "instalacion_laravel_5.1"
+2- Luego seguir los pasos de la carpeta "configuracion_de_laravel_5.1"
+3- Luego seguir este orden recomendable:
+
+   - rutas
+   - controladores
+   - modelos
+   - migraciones
+   

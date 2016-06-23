@@ -1,0 +1,35 @@
+1- Instalar xampp
+2- Instalar git . Link para descargar git: "https://git-scm.com/downloads"
+3- Instalar composer (el instalador esta en la carpeta  "instalador composer" y los pasos para instalarlo)
+
+
+4- Con git dirigirse al directorio htdocs para instalar alli el proyecto o carpeta principal 
+   laravel 5.1 con la siguiente linea:
+
+---------------------------------------------------------------------------
+  cd /c/xampp/htdocs/
+---------------------------------------------------------------------------
+
+5- Instalar Laravel 5.1 utilizando git con la siguiente linea:
+
+---------------------------------------------------------------------------
+  composer create-project laravel/laravel nombre_de_proyecto 5.1.*
+---------------------------------------------------------------------------
+
+6- Una vez terminado la instalacion de laravel 5.1 , crear un repositorio con git.
+
+  Pasos:
+
+  a)- primero  dirigirse a la ruta del proyecto, ejemplo:
+      ----------------------------------------------------------------------
+      cd /c/xampp/htdocs/nombre_de_proyecto
+      ----------------------------------------------------------------------
+
+  b)- luego colocar la siguiente linea:
+      ----------------------------------------------------------------------
+      git init
+      ----------------------------------------------------------------------
+
+
+
+

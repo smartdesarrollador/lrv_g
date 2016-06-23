@@ -1,0 +1,5 @@
+creacion de un request
+
+----------------------------------------------------
+php artisan make:request StoreBlogPostRequest
+----------------------------------------------------

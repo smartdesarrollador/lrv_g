@@ -1,0 +1,100 @@
+1- Crear tabla
+
+-----------------------------------------------
+php artisan make:migration customers
+------------------------------------------------
+
+2- configurar la tabla
+
+----------------------------------------------
+<?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class Customers extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('customers', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('contact_number');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('customers');
+    }
+}
+
+----------------------------------------------
+
+3- Migrar tabla
+
+------------------------------------------------
+php artisan migrate
+-------------------------------------------------
+
+4- Crear Seeder
+
+-------------------------------------------------
+php artisan make:seeder CustomersTableSeeder
+------------------------------------------------
+
+5- Configurar seeder
+
+--------------------------------------------------
+<?php
+
+use Illuminate\Database\Seeder;
+
+class CustomersTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $faker = Faker\Factory::create();
+
+        $limit = 33;
+
+        for ($i = 0; $i < $limit; $i++) {
+            DB::table('customers')->insert([ //,
+                'name' => $faker->name,
+                'email' => $faker->unique()->email,
+                'contact_number' => $faker->phoneNumber,
+            ]);
+        }
+    }
+}
+
+--------------------------------------------------
+
+6- migrar los datos del seeder con la siguiente linea
+
+-------------------------------------------------
+php artisan db:seed --class=CustomersTableSeeder
+-------------------------------------------------
+
+7- En el archivo "elementos_faker.txt" se muestran los diferentes datos que se pueden agregar
+   al seeder.
+
+REFERENCIA:
+http://www.tutorials.kode-blog.com/laravel-5-faker-tutorial

@@ -1,0 +1,29 @@
+- Agregar columnas a tablas generadas:
+
+  los tipos de columnas que se pueden agregar se encuentran en este link:
+
+  http://laraveles.com/docs/5.0/schema
+
+  Ejemplos de algunas columnas que se pueden agregar:
+
+  -------------------------------------------------------
+
+  $table->string('email');
+
+  //Equivalente VARCHAR
+
+  ------------------------------------------------------
+
+  $table->string('name', 100);
+
+  //Equivalente VARCHAR con una longitud
+
+  ---------------------------------------------------------
+
+  $table->text('description');
+
+  //Equivalente TEXT
+
+  --------------------------------------------------------
+
+  

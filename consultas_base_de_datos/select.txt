@@ -1,0 +1,11 @@
+- Seleccionar algunas columnas con "select":
+
+----------------------------------------------------
+        $users = DB::table('consultas')
+        ->select(['nombre','descripcion' ])
+        ->get();
+
+        dd($users);
+
+        return $users;
+----------------------------------------------------
